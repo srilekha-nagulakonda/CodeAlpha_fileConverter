@@ -1,0 +1,83 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ecf0f3;
+}
+#container {
+  /* border: 2px solid red; */
+  width: 480px;
+  border-radius: 20px;
+  box-shadow: 14px 14px 20px #cbceb1, -14px -14px 20px white;
+  display: flex;
+  flex-direction: column;
+}
+#logo img {
+  width: 90px;
+  height: 80px;
+}
+#logo {
+  margin: 0.5rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#container textarea {
+  resize: none;
+  height: 250px;
+  width: 85%;
+  margin: auto;
+  padding: 7px;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+#box {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.5rem 0rem;
+}
+#name label {
+  display: block;
+}
+#name input {
+  margin-top: 0.2rem;
+  padding: 4px;
+  box-shadow: inset 3px 3px 3px #cbced1, inset -3px -3px 3px white;
+  border: none;
+  outline: none;
+  background: none;
+  border-radius: 5px;
+}
+#type label {
+  display: block;
+}
+#type select {
+  margin-top: 0.2rem;
+  padding: 4px;
+  box-shadow: inset 3px 3px 3px #cbced1, inset -3px -3px 3px white;
+  border: none;
+  outline: none;
+  background: none;
+  border-radius: 5px;
+}
+#btn {
+  height: 2rem;
+  width: 40%;
+  border-radius: 7px;
+  margin: 1rem auto;
+  background: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #cbced1, -3px -3px 5px white;
+  font-size: 20px;
+  transition: 0.2s all;
+}
+#btn:hover {
+  transform: scale(0.97);
+}

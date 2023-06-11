@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>File Converter</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="logo">
+        <img src="./image.png" />
+      </div>
+      <textarea required placeholder="write something here.."></textarea>
+      <div id="box">
+        <div id="name">
+          <label for="fileName"> File Name </label>
+          <input type="text" id="fileName" />
+        </div>
+        <div id="type">
+          <label for="saveAs">Save As</label>
+          <select id="saveAs">
+            <option value="" selected>Text</option>
+            <option value="application/pdf">Pdf</option>
+            <option value="image/png">Png</option>
+            <option value="text/html">Html</option>
+            <option value="text/javascript">Js</option>
+            <option value="image/jpeg">Jpeg</option>
+            <option value="application/msword">Doc</option>
+          </select>
+        </div>
+      </div>
+      <button id="btn">Save</button>
+    </div>
+    <script>
+      let data = document.getElementsByTagName("textarea");
+      let name = document.getElementById("fileName");
+      let type = document.getElementById("saveAs");
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        let blob = new Blob([data.value], { type: type.value });
+        let url = URL.createObjectURL(blob);
+        let link = document.createElement("a");
+        link.download = name.value;
+        link.href = url;
+        link.click();
+      });
+    </script>
+  </body>
+</html>
